@@ -20,7 +20,14 @@ let colors_name = "wombat"
 
 
 " General colors
-hi Normal       ctermfg=252     ctermbg=234     cterm=none      guifg=#D4D4D4   guibg=#1E1E1E   gui=none
+
+if g:wombat_transparent_bg == 1
+    hi Normal       ctermfg=252     ctermbg=none     cterm=none      guifg=#D4D4D4   guibg=#1E1E1E   gui=none
+    hi NonText       ctermfg=241     ctermbg=none     cterm=none      guifg=#606060   guibg=#1E1E1E   gui=none
+else
+    hi Normal       ctermfg=252     ctermbg=234     cterm=none      guifg=#D4D4D4   guibg=#1E1E1E   gui=none
+    hi NonText       ctermfg=241     ctermbg=234     cterm=none      guifg=#606060   guibg=#1E1E1E   gui=none
+endif
 hi LineNr       ctermfg=241     ctermbg=234     cterm=none      guifg=#606060   guibg=#1E1E1E   gui=none
 hi Cursor       ctermfg=234     ctermbg=228     cterm=none      guifg=#242424   guibg=#eae788   gui=none
 hi Visual       ctermfg=251     ctermbg=239     cterm=none      guifg=#c3c6ca   guibg=#554d4b   gui=none
@@ -91,6 +98,5 @@ hi Todo         ctermfg=101     cterm=none      guifg=#857b6f   gui=italic
 " Links
 hi! link FoldColumn     Folded
 hi! link CursorColumn   CursorLine
-hi! link NonText        LineNr
 hi! link QuickFixLine   Search
 " vim:set ts=4 sw=4 et:
