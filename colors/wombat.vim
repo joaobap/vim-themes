@@ -18,6 +18,7 @@ endif
 
 let colors_name = "wombat"
 
+let g:wombat_transparent_bg=0
 
 " General colors
 
