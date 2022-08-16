@@ -18,7 +18,7 @@ endif
 
 let colors_name = "wombat"
 
-if !exists(g:wombat_transparent_bg)
+if !exists('g:wombat_transparent_bg')
     let g:wombat_transparent_bg = 0
 endif
 
