@@ -18,9 +18,13 @@ endif
 
 let colors_name = "wombat"
 
+if !exists(g:wombat_transparent_bg)
+    let g:wombat_transparent_bg = 0
+endif
+
 " General colors
 
-if exists(g:wombat_transparent_bg) && g:wombat_transparent_bg == 1
+if g:wombat_transparent_bg == 1
     hi Normal       ctermfg=252     ctermbg=none     cterm=none      guifg=#D4D4D4   guibg=#1E1E1E   gui=none
     hi NonText       ctermfg=241     ctermbg=none     cterm=none      guifg=#606060   guibg=#1E1E1E   gui=none
 else
